@@ -21,14 +21,15 @@ public class ArrayListMethods {
 
     public static ArrayList<Double> firstAndLast() {
         System.out.println("Enter the numbers:");
-        ArrayList<Double> list = new ArrayList<Double>();
+        ArrayList<Double> list = new ArrayList<>();
         while (input.nextDouble() != 0) ;
         {
             list.add(input.nextDouble());
         }
-        System.out.println(list.size() + 1);
-        System.out.println(list.subList(0, 1));
-        System.out.println(list.subList(list.size() - 1, list.size()));
+        ArrayList<Double> outcome = new ArrayList<>();
+        outcome.add((double)(list.size()));
+        outcome.add((double)(list.subList(0, 1)));
+        outcome.add((double)(list.subList((int)(list.size() - 1))));
         return list;
     }
 
@@ -52,7 +53,7 @@ public class ArrayListMethods {
         }
         double max = numbers.get(0);
         for (int i = 0; i < 3; i++) {
-            if (numbers.get(i) < max) {
+            if (numbers.get(i) > max) {
                 max = numbers.get(i);
             }
         }
