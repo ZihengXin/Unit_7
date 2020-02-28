@@ -20,17 +20,18 @@ public class ArrayListMethods {
     }
 
     public static ArrayList<Double> firstAndLast() {
-        System.out.println("Enter the numbers:");
         ArrayList<Double> list = new ArrayList<>();
-        while (input.nextDouble() != 0) ;
-        {
-            list.add(input.nextDouble());
+        double n = 2;
+        System.out.println("Enter your number: ");
+        while (n != 0){
+            n = input.nextDouble();
+            list.add(n);
         }
         ArrayList<Double> outcome = new ArrayList<>();
-        outcome.add((double)(list.size()));
-        outcome.add((double)(list.subList(0, 1)));
-        outcome.add((double)(list.subList((int)(list.size() - 1))));
-        return list;
+        outcome.add(list.size()-1.0);
+        outcome.add(list.get(0));
+        outcome.add(list.get(list.size()-2));
+        return outcome;
     }
 
     public static ArrayList<Double> getNumbers() {
