@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class TraversingTest {
-
     @Test
     public void getStates() {
         ArrayList<String> test = new ArrayList<>();
@@ -64,5 +63,4 @@ public class TraversingTest {
         assertEquals(17.22, ListOfRectangles.findAverage(r), 0.1);
 
     }
-
 }
