@@ -17,6 +17,16 @@ public class DonorRunner {
         return List;
     }
     public static void sortDonors(ArrayList<Donor> List) {
-        
+        for (int i = 0; i < List.size(); i++) {
+            int max = i;
+            for (int a = i+1; a < List.size(); a++) {
+                if (List.get(max).getAmount() < List.get(a).getAmount()) {
+                    max = a;
+                }
+            }
+            Donor name = List.get(i);
+            List.set(i, List.get(max));
+            List.set(max, name);
+        }
     }
 }
